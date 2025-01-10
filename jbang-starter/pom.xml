@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>in.virit.ws</groupId>
+        <artifactId>widgetset</artifactId>
+        <version>24.6.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>jbang-starter</artifactId>
+    <name>Viritin JBang Starter</name>
+    <description>Basic dependencies of Vaadin Flow and Spring Boot + some 
+        helpers to create JBang powered tools with Vaadin UI.</description>
+    <packaging>jar</packaging>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>open</artifactId>
+            <version>8.5.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>in.virit.ws</groupId>
+            <artifactId>sb</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    
+</project>

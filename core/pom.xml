@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>in.virit.ws</groupId>
+        <artifactId>widgetset</artifactId>
+        <version>24.6.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>core</artifactId>
+    <name>Core Widgetset</name>
+    <description>Ships a pre-built Vaadin Flow Components, so that Vaadin can be
+        run completely without custom Maven plugings and Vite based frontend
+        build.</description>
+    <packaging>jar</packaging>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-core</artifactId>
+            <version>${vaadin.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-maven-plugin</artifactId>
+                <version>${vaadin.version}</version>
+                <executions>
+                    <execution>
+                        <id>frontend</id>
+                        <!-- Not yet on compile, but before actual packaging -->
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>prepare-frontend</goal>
+                            <goal>build-frontend</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <frontendDirectory>target</frontendDirectory>
+                    <reactEnable>false</reactEnable>
+                    <optimizeBundle>false</optimizeBundle>
+                    <productionMode>true</productionMode>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    
+</project>
