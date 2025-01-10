@@ -1,4 +1,4 @@
-# Widgetset - a pre-built front-end bunble for simple (and FAST!) Vaadin apps
+# Widgetset - a pre-built front-end bundle for simple (and FAST!) Vaadin apps
 
 A pre-built Vaadin Flow widgetset for simple pure Java web apps, for developers who are too busy to wait for front-end build.
 
