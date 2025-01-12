@@ -43,7 +43,6 @@
                     <frontendDirectory>target</frontendDirectory>
                     <reactEnable>false</reactEnable>
                     <optimizeBundle>false</optimizeBundle>
-                    <productionMode>true</productionMode>
                 </configuration>
             </plugin>
         </plugins>
