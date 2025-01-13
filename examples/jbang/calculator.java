@@ -16,7 +16,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.vaadin.firitin.components.button.DefaultButton;
 
 @SpringBootApplication
-public class hello {
+public class calculator {
 
     enum Operation {
         ADD, SUBTRACT, MULTIPLY, DIVIDE;
@@ -32,7 +32,7 @@ public class hello {
     }
 
     public static void main(String... args) {
-        SpringApplication.run(hello.class, args);
+        SpringApplication.run(calculator.class, args);
     }
 
     @Route
