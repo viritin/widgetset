@@ -1,3 +1,5 @@
 .flattened-pom.xml
 target
 prod.bundle
+examples/custom-widgetset/mywidgetset/node_modules
+examples/custom-widgetset/mywidgetset/src/main/frontend/generated
