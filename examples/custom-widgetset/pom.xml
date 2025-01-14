@@ -6,10 +6,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
         <vaadin.version>24.6.1</vaadin.version>
     </properties>
     <modules>
         <module>mywidgetset</module>
         <module>my-app1</module>
+        <module>my-war-app</module>
     </modules>
 </project>

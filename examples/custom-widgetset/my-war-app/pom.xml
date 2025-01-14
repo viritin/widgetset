@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>widgetset-example</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <groupId>org.example</groupId>
+    <artifactId>my-war-app</artifactId>
+    <packaging>war</packaging>
+
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${vaadin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Essential Vaadin dependencies and a pre-built front-end-bundle -->        
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>mywidgetset</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>jetty:run</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>11.0.24</version>
+                <configuration>
+                    <!--
+                    Configures automatic reload of Jetty server
+                    (with 2 second timeout) when new classes are compiled 
+                    (e.g. by IDEs).
+                    Should be disabeld when using a proper live reload system,
+                    such as JRebel.
+                    If using IntelliJ IDEA with autocompilation, this
+                    might cause lots of unnecessary compilations in the
+                    background. Consider using "0" and trigger restart manually
+                    by hitting enter.
+                    -->
+                    <scan>2</scan>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

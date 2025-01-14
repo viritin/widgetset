@@ -42,7 +42,12 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-core</artifactId>
-            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-dev</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <dependency>
