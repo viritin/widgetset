@@ -8,7 +8,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 // Things like theme, Push etc can be set here and these will propagate to apps
 // using this widgetset module.
 @Theme(value="my-app", variant = Lumo.DARK)
-@Push
+//@Push
 public class AppShell implements AppShellConfigurator{
     
 }

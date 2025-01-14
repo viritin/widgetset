@@ -14,5 +14,7 @@
         <module>mywidgetset</module>
         <module>my-app1</module>
         <module>my-war-app</module>
+        <module>my-embedded-undertow-app</module>
+        <module>my-vaadin-boot-app</module>
     </modules>
 </project>
