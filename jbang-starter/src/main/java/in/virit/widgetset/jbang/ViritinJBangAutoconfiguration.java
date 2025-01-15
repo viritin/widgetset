@@ -30,8 +30,10 @@ public class ViritinJBangAutoconfiguration {
         // hook to close the application when the browser window is closed
         event.getSource().addUIInitListener(uiInitEvent -> {
             uiInitEvent.getUI().addDetachListener(detachEvent -> {
-                System.out.println("Window closed, closing the SB app (and jbang script and jvm");
-                context.close();
+                System.out.println("Vaadin window closed, closing the SB app (and JBang script and jvm)");
+                // TODO figure out if System.exit is really worse than context.close ??
+                // context.close();
+                System.exit(0);
             });
         });
     }
