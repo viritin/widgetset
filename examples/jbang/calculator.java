@@ -1,6 +1,6 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 17+
-//DEPS in.virit.ws:jbang-starter:24.6.1
+//DEPS in.virit.ws:jbang-starter:24.6.2-SNAPSHOT
 
 package bang;
 
@@ -18,6 +18,10 @@ import org.vaadin.firitin.components.button.DefaultButton;
 @SpringBootApplication
 public class calculator {
 
+    public static void main(String... args) {
+        SpringApplication.run(calculator.class, args);
+    }
+
     enum Operation {
         ADD, SUBTRACT, MULTIPLY, DIVIDE;
 
@@ -29,10 +33,6 @@ public class calculator {
                 case DIVIDE -> "/";
             };
         }
-    }
-
-    public static void main(String... args) {
-        SpringApplication.run(calculator.class, args);
     }
 
     @Route
