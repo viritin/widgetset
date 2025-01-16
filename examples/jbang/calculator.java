@@ -1,6 +1,6 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 17+
-//DEPS in.virit.ws:jbang-starter:24.6.2-SNAPSHOT
+//DEPS in.virit.ws:jbang-starter:24.6.2
 
 package bang;
 
