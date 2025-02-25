@@ -4,7 +4,7 @@
     <parent>
         <groupId>in.virit.ws</groupId>
         <artifactId>widgetset</artifactId>
-        <version>24.6.3-SNAPSHOT</version>
+        <version>24.6.5-SNAPSHOT</version>
     </parent>
     <artifactId>sb</artifactId>
     <name>Viritin Widgetset and Spring Boot</name>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>in.virit</groupId>
             <artifactId>viritin</artifactId>
-            <version>2.11.2</version>
+            <version>2.12.2</version>
         </dependency>
         <dependency>
             <groupId>in.virit.ws</groupId>
