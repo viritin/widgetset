@@ -4,7 +4,7 @@
     <parent>
         <groupId>in.virit.ws</groupId>
         <artifactId>widgetset</artifactId>
-        <version>24.6.5</version>
+        <version>24.6.6-SNAPSHOT</version>
     </parent>
     <artifactId>core</artifactId>
     <name>Core Widgetset</name>

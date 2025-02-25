@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>in.virit.ws</groupId>
     <artifactId>widgetset</artifactId>
-    <version>24.6.5</version>
+    <version>24.6.6-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Viritin Widgetset parent project</name>
     <description>This is a parent project helpers that bypass the front-end
@@ -29,7 +29,7 @@
         <url>https://github.com/viritin/vaadin-flow-archetypes</url>
         <connection>scm:git:git://github.com/viritin/widgetset.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/viritin/widgetset.git</developerConnection>
-      <tag>widgetset-24.6.5</tag>
+      <tag>HEAD</tag>
   </scm>
     
     <modules>
