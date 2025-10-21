@@ -1,5 +1,6 @@
 package in.virit.widgetset.jbang;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.server.ServiceInitEvent;
 import com.vaadin.open.Open;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,11 @@ public class ViritinJBangAutoconfiguration {
     void onApplicationStarted2(ServiceInitEvent event) {
         // hook to close the application when the browser window is closed
         event.getSource().addUIInitListener(uiInitEvent -> {
-            uiInitEvent.getUI().addDetachListener(detachEvent -> {
+
+            UI ui = uiInitEvent.getUI();
+            ui.getPage().addStyleSheet("aura-theme.css");
+
+            ui.addDetachListener(detachEvent -> {
                 System.out.println("Vaadin window closed, closing the SB app (and JBang script and jvm)");
                 // TODO figure out if System.exit is really worse than context.close ??
                 // context.close();
