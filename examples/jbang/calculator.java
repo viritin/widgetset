@@ -1,19 +1,19 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//JAVA 17+
-//DEPS in.virit.ws:jbang-starter:24.6.2
+//JAVA 25+
+//DEPS in.virit.ws:jbang-starter:25.0.0-beta2-SNAPSHOT
 
 package bang;
 
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.router.Route;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.vaadin.firitin.components.button.DefaultButton;
 
 @SpringBootApplication
 public class calculator {
@@ -48,7 +48,7 @@ public class calculator {
                 setValue(Operation.ADD);
             }};
             var num2 = new NumberField(){{setValue(2.0);}};
-            var execute = new DefaultButton("=");
+            var execute = new Button("=");
             var result = new Div();
             add(num1, operation, num2, execute, result);
 
