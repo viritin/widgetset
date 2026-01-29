@@ -15,7 +15,6 @@ public class ViritinJBangAutoconfiguration {
     @Autowired
     ConfigurableApplicationContext context;
 
-
     @EventListener
     void onApplicationStarted(WebServerInitializedEvent event) {
         int port = event.getWebServer().getPort();
@@ -33,12 +32,14 @@ public class ViritinJBangAutoconfiguration {
 
             UI ui = uiInitEvent.getUI();
             ui.getPage().addStyleSheet("aura-theme.css");
+            // Add at least a bit of color for things like default buttons
+            ui.getElement().getStyle().set("--aura-accent-color-light", "var(--aura-purple)");
 
             ui.addDetachListener(detachEvent -> {
                 System.out.println("Vaadin window closed, closing the SB app (and JBang script and jvm)");
                 // TODO figure out if System.exit is really worse than context.close ??
-                // context.close();
-                System.exit(0);
+                context.close();
+                //System.exit(0);
             });
         });
     }

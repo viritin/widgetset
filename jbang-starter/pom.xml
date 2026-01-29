@@ -4,7 +4,7 @@
     <parent>
         <groupId>in.virit.ws</groupId>
         <artifactId>widgetset</artifactId>
-        <version>25.0.0-beta3-SNAPSHOT</version>
+        <version>25.0.4-SNAPSHOT</version>
     </parent>
     <artifactId>jbang-starter</artifactId>
     <name>Viritin JBang Starter</name>

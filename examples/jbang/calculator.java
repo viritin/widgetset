@@ -1,9 +1,10 @@
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 //JAVA 25+
-//DEPS in.virit.ws:jbang-starter:25.0.0-beta2
+//DEPS in.virit.ws:jbang-starter:25.0.4-SNAPSHOT
 
 package bang;
 
+import org.vaadin.firitin.components.button.DefaultButton;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Paragraph;
@@ -48,7 +49,7 @@ public class calculator {
                 setValue(Operation.ADD);
             }};
             var num2 = new NumberField(){{setValue(2.0);}};
-            var execute = new Button("=");
+            var execute = new DefaultButton("=");
             var result = new Div();
             add(num1, operation, num2, execute, result);
 
