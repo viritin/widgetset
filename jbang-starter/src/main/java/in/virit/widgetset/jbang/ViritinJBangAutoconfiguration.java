@@ -34,6 +34,10 @@ public class ViritinJBangAutoconfiguration {
             ui.getPage().addStyleSheet("aura-theme.css");
             // Add at least a bit of color for things like default buttons
             ui.getElement().getStyle().set("--aura-accent-color-light", "var(--aura-purple)");
+            ui.getElement().getStyle().set("--aura-accent-color-dark", "var(--aura-purple)");
+
+            // Use the actual content background color of Aura instead of darker gray
+            ui.addClassName("aura-surface");
 
             ui.addDetachListener(detachEvent -> {
                 System.out.println("Vaadin window closed, closing the SB app (and JBang script and jvm)");
