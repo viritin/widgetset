@@ -33,9 +33,7 @@ public class ViritinJBangAutoconfiguration {
             UI ui = uiInitEvent.getUI();
             ui.getPage().addStyleSheet("aura-theme.css");
             // Add at least a bit of color for things like default buttons
-            ui.getElement().getStyle().set("--aura-accent-color-light", "var(--aura-purple)");
-            ui.getElement().getStyle().set("--aura-accent-color-dark", "var(--aura-purple)");
-
+            ui.addClassName("aura-accent-purple");
             // Use the actual content background color of Aura instead of darker gray
             ui.addClassName("aura-surface");
 
