@@ -4,7 +4,7 @@
     <parent>
         <groupId>in.virit.ws</groupId>
         <artifactId>widgetset</artifactId>
-        <version>25.1.0-rc2</version>
+        <version>25.1.0-SNAPSHOT</version>
     </parent>
     <artifactId>sb</artifactId>
     <name>Viritin Widgetset and Spring Boot</name>
