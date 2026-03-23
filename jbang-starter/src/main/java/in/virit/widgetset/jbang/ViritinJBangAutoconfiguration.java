@@ -2,6 +2,7 @@ package in.virit.widgetset.jbang;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.server.ServiceInitEvent;
+import com.vaadin.flow.theme.aura.Aura;
 import com.vaadin.open.Open;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -31,7 +32,7 @@ public class ViritinJBangAutoconfiguration {
         event.getSource().addUIInitListener(uiInitEvent -> {
 
             UI ui = uiInitEvent.getUI();
-            ui.getPage().addStyleSheet("aura-theme.css");
+            ui.getPage().addStyleSheet(Aura.STYLESHEET);
             // Add at least a bit of color for things like default buttons
             ui.addClassName("aura-accent-purple");
             // Use the actual content background color of Aura instead of darker gray
