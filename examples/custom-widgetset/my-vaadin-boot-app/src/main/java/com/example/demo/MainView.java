@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        add("It works via com.github.mvysny.vaadin-boot!? This should have ugly dark-orange theme and custom widgets");
+        add("It works!? This dark sunset glass theme and custom widgets, coming in via mywidgetset module. No front-end build at all.");
         var tf = new TextField("Enter your name");
         var button = new Button("Say hello", e -> {
             add(new Paragraph("Hello, " + tf.getValue()));

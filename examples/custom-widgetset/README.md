@@ -6,9 +6,10 @@ The `mywidgetset' project builds the front-end bundle. It also brings in the vaa
 
 If you use some pre-made add-ons, add their dependencies there and I'd also suggest to add some end-to-end tests to the mywidgetset project, so you verify those work when you e.g. upgrade your Vaadin version.
 
-In addition to the actual widgetset module, there are couple of app examples, all utilising the same pre-built mywidgetset artifact. Note that none of these setups contain the Vaadin build plugin or dev mode, so they start up essentially immediately.
+In addition to the actual widgetset module, there are couple of app examples, all utilising the same pre-built mywidgetset artifact. Note that **none of these setups contain the Vaadin build plugin or dev mode**, so they start up essentially immediately and always only "production mode", which is fine for many apps.
 
- * my-vaadin-app1, "standard" Spring Boot app
+ * spring-boot-app, "standard" Spring Boot app, that uses the pre-built widgetset
  * my-war-app, a standard war packaged app
  * my-embedded-undertow-app, an example with embedded undertow starting the server
- * my-vaadin-boot-app, an example with com.github.mvysny.vaadin-boot starting the app (~ jetty)
+ * my-vaadin-boot-app, an example with com.github.mvysny.vaadin-boot starting the app (~ jetty started from a main method)
+ * TODO add quarkus example (probably works fine as well)

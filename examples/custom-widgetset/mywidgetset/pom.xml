@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.example</groupId>
         <artifactId>widgetset-example</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
     <artifactId>mywidgetset</artifactId>
     <description>This module builds a re-usable pre-built widgetset, with your 
@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
     
     <properties>
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
     </properties>
     
     <dependencyManagement>
@@ -31,7 +31,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.4.1</version>
+                <version>4.1.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -42,14 +42,20 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-core</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>vaadin-dev</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
-        
+
+        <!-- One add-on as an example -->
+        <dependency>
+            <groupId>com.flowingcode.vaadin.addons</groupId>
+            <artifactId>relative-time-addon</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-dev</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
@@ -63,13 +69,13 @@
         <dependency>
             <groupId>in.virit</groupId>
             <artifactId>mopo</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.6</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
-            <version>1.49.0</version>
+            <version>1.59.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -87,17 +93,18 @@
                         <!-- Not yet on compile, but before actual packaging -->
                         <phase>prepare-package</phase>
                         <goals>
-                            <goal>prepare-frontend</goal>
                             <goal>build-frontend</goal>
                         </goals>
                     </execution>
                 </executions>
                 <dependencies>
+                    <!-- TODO check if needed anymore
                     <dependency>
                         <groupId>com.vaadin</groupId>
                         <artifactId>vaadin-core</artifactId>
-                        <version>24.6.1</version>
+                        <version>${vaadin.version}</version>
                     </dependency>
+                     -->
                 </dependencies>
                 <configuration>
                     <optimizeBundle>false</optimizeBundle>

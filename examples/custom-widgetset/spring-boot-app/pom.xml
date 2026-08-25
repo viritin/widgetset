@@ -6,11 +6,11 @@
         <!-- this app is using spring boot parent, but this is by no means necessary -->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.1</version>
+        <version>4.1.0</version>
         <relativePath/>
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>my-app1</artifactId>
+    <artifactId>spring-boot-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>my-app1</name>
     <description>Demo project for Spring Boot with Vaadin Flow (with pre-built front-end bundle).</description>
@@ -19,23 +19,12 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
-            <version>24.6.1</version>
-            <exclusions>
-                <!-- exclude dev mode and hilla as they are incompatible with the approach -->
-                <exclusion>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>vaadin-dev</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.vaadin</groupId>
-                    <artifactId>hilla</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>25.2.6</version>
         </dependency>
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>mywidgetset</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
